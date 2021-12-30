@@ -1,0 +1,144 @@
+body {
+  font-size: 24px;
+  font-family: monospace;
+  background-color: #c5e4e7 !important;
+}
+
+header h3 {
+  letter-spacing: 0.3em;
+  color: #00494d;
+  line-height: 26px;
+  text-align: center;
+  position: relative;
+  top: 75px;
+}
+
+.bill-area {
+  height: 450px;
+  background-color: white;
+  border-radius: 2rem;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 2rem;
+}
+
+.bill-area .right-section {
+  width: 50%;
+  float: right;
+  height: 380px;
+  border-radius: 10px;
+  background-color: #00494d;
+  padding: 40px;
+}
+
+.bill-area .right-section .label {
+  float: left;
+}
+
+.bill-area .right-section .amount {
+  float: right;
+}
+
+.bill-area .right-section .tip-label-top {
+  margin-bottom: 0 !important;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+.bill-area .right-section .tip-label-bottom {
+  margin-bottom: 0 !important;
+  color: #c5e4e7;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+}
+
+.bill-area .right-section h1#tipAmountPP, .bill-area .right-section h1#totalAmountPP {
+  color: #26c0ab;
+}
+
+.bill-area .right-section #resetBtn {
+  width: 100%;
+  border: 0;
+  height: 40px;
+  background: #5e7a7d;
+  color: #00494d;
+  font-size: 20px;
+  margin-top: 100px;
+}
+
+.bill-area .left-section {
+  width: 45%;
+  padding: 0 10px;
+  float: left;
+}
+
+.bill-area .left-section label {
+  letter-spacing: 0.1em;
+  color: #00494d;
+  margin-bottom: 0.5rem;
+  padding-bottom: 5px;
+}
+
+.bill-area .left-section .input-box .dollarsign, .bill-area .left-section .input-box .userEmoji {
+  float: left;
+  margin-top: -60px;
+  margin-left: 25px;
+  position: relative;
+  z-index: 2;
+  color: #7f9c9f;
+}
+
+.bill-area .left-section .input-box input {
+  width: 100%;
+  height: 40px;
+  color: #7f9c9f;
+  border-radius: 8px;
+  font-size: 22px;
+  background: #f4fafa;
+  border: 0;
+  margin-bottom: 2rem;
+}
+
+.bill-area .left-section .input-box input::-webkit-outer-spin-button, .bill-area .left-section .input-box input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bill-area .left-section .input-box input::-webkit-input-placeholder {
+  color: #7f9c9f;
+  position: relative;
+  left: -25px;
+}
+
+.bill-area .left-section .input-box input:-ms-input-placeholder {
+  color: #7f9c9f;
+  position: relative;
+  left: -25px;
+}
+
+.bill-area .left-section .input-box input::-ms-input-placeholder {
+  color: #7f9c9f;
+  position: relative;
+  left: -25px;
+}
+
+.bill-area .left-section .input-box input::placeholder {
+  color: #7f9c9f;
+  position: relative;
+  left: -25px;
+}
+
+.bill-area .left-section .row .tip-value {
+  width: 100%;
+  height: 40px;
+  background-color: #00494d;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 0;
+}
+/*# sourceMappingURL=styles.css.map */

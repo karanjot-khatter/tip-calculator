@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="dist/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="dist/css/styles.css" type="text/css">
+
+
+  <style>
+    /* Chrome, Safari, Edge, Opera */
+    </style>
+
+</head>
+<body>
+  <header>
+    <h3>SPLI</h3>
+    <h3 style="letter-spacing: 0.2em;">TTER</h3>
+  </header>
+
+  <div class="bill-area col-8">
+    <div class="left-section">
+      <label for="billamount">Bill</label>
+      <div class="input-box">
+        <input dir="rtl" type="number" id="billamount" name="billamount" placeholder="0">
+        <span class="fas fa-dollar-sign dollarsign"></span>
+      </div>
+
+      <label>Select Tip %</label>
+      <div class="container">
+        <div class="row">
+          <div style="padding-left:0 !important" class="col-sm">
+            <button value="5" class="tip-value">5%</button>
+          </div>
+          <div class="col-sm">
+            <button value="10" class="tip-value">10%</button>
+          </div>
+          <div style="padding-right:0 !important" class="col-sm">
+            <button value="15" class="tip-value">15%</button>
+          </div>
+        </div>
+
+        <div style="padding-top:20px" class="row">
+          <div style="padding-left:0 !important" class="col-sm">
+            <button value="25" class="tip-value">25%</button>
+          </div>
+          <div class="col-sm">
+            <button vlaue="50" class="tip-value">50%</button>
+          </div>
+          <div style="padding-right:0 !important" class="col-sm">
+            <button style="background-color: #f4fafa;color: #00494d; border-color: #f4fafa;" value="" class="tip-value">Custom</button>
+          </div>
+        </div>
+      </div>
+
+      <label style="padding-top:40px;">Number of People</label>
+      <div class="input-box">
+        <input dir="rtl" type="number" id="noOfPeople" name="noOfPeople" placeholder="0">
+        <span class="fas fa-user userEmoji"></span>
+      </div>
+
+    </div>
+
+    <div class="right-section">
+      <div class="container">
+        <div style="margin-top:20px;" class="row">
+          <div class="col-sm">
+            <p class="tip-label-top">Tip Amount</p>
+            <p class="tip-label-bottom">/  person</p>
+          </div>
+          <div style="padding-right:0 !important; text-align-last: end;" class="col-sm">
+          <h1 id="tipAmountPP">$0.00</h1>
+          </div>
+        </div>
+
+        <div style="margin-top:30px;" class="row">
+          <div class="col-sm">
+            <p class="tip-label-top">Total</p>
+            <p class="tip-label-bottom">/  person</p>
+          </div>
+          <div style="padding-right:0 !important; text-align-last: end;" class="col-sm">
+          <h1 id="totalAmountPP">$0.00</h1>
+          </div>
+        </div>
+      </div>
+
+      <button id="resetBtn" disabled>RESET</button>
+    </div>
+
+  </div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+<script src="dist/js/index.js"></script>
+
+</body>
+</html>

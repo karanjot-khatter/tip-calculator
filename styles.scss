@@ -1,0 +1,137 @@
+$primary-color: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-greyish-cyan: hsl(186, 14%, 43%);
+$light-greyish-cyan: hsl(185, 41%, 84%);
+
+
+body{
+    font-size:24px;
+    font-family: monospace;
+    background-color: $light-greyish-cyan !important;
+}
+
+header{
+    h3{
+        letter-spacing: 0.3em;
+        color: $very-dark-cyan;
+        line-height: 26px;
+        text-align: center;
+        position: relative;
+        top: 75px;
+    }
+}
+
+.bill-area{
+    height:450px;
+    background-color:white;
+    border-radius: 2rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding:2rem;
+    
+    .right-section{
+        width:50%;
+        float:right;
+        height: 380px;
+        border-radius: 10px;
+        background-color: #00494d;
+        padding:40px;
+
+        .label{
+            float:left;
+        }
+
+        .amount{
+            float:right;
+        }
+
+        .tip-label-top{
+            margin-bottom:0 !important;
+             color: white; 
+             letter-spacing: 0.1em;
+        }
+
+        .tip-label-bottom{
+            margin-bottom:0 !important;
+             color: $light-greyish-cyan; 
+             letter-spacing: 0.1em;
+             font-size: 12px;
+        }
+
+        h1#tipAmountPP, h1#totalAmountPP{
+            color: $primary-color;
+        }
+
+        #resetBtn{
+            width: 100%;
+            border: 0;
+            height: 40px;
+            background:$dark-greyish-cyan;
+            color:$very-dark-cyan;
+            font-size: 20px;
+            margin-top: 100px;
+        }
+
+    }
+
+    .left-section{
+        width: 45%;
+        padding: 0 10px;
+        float:left;
+
+        label{
+            letter-spacing: 0.1em;
+            color: $very-dark-cyan;
+            margin-bottom: 0.5rem;
+            padding-bottom:5px;
+        }
+        .input-box{
+            .dollarsign, .userEmoji{
+                float: left;
+                margin-top: -60px;
+                margin-left: 25px;
+                position: relative;
+                z-index: 2;
+                color: hsl(184, 14%, 56%);
+            }
+            input{
+                width: 100%;
+                height: 40px;
+                color: hsl(184, 14%, 56%);
+                border-radius: 8px;
+                font-size: 22px;
+                background: hsl(189, 41%, 97%);
+                border: 0;
+                margin-bottom:2rem;
+                
+                &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                &::placeholder{
+                    color: hsl(184, 14%, 56%);
+                    position:relative;
+                    left:-25px;
+                }
+            }
+            
+        }
+
+        .row{
+            .tip-value{
+                width:100%;
+                height:40px;
+                background-color: hsl(183, 100%, 15%);
+                color: white;
+                font-size: 20px;
+                border-radius: 5px;
+                border:0;
+            }
+        }
+    
+    }
+}
