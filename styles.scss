@@ -69,7 +69,7 @@ header{
             width: 100%;
             border: 0;
             height: 40px;
-            background:$dark-greyish-cyan;
+            background:#0D686D;
             color:$very-dark-cyan;
             font-size: 20px;
             margin-top: 100px;
@@ -115,9 +115,13 @@ header{
                 &::placeholder{
                     color: hsl(184, 14%, 56%);
                     position:relative;
-                    left:-25px;
                 }
             }
+
+            input[type=number]:focus {
+                border:2px solid $primary-color;
+                outline: none !important;
+              }
             
         }
 
@@ -130,6 +134,36 @@ header{
                 font-size: 20px;
                 border-radius: 5px;
                 border:0;
+            }
+
+            .tip-value.active{
+                background-color: $primary-color !important;
+                color:black !important;
+            }
+
+            .tip-value-custom{
+                background-color: #f4fafa;
+                color: #00494d;
+                border: 0;
+                padding: 0;
+                margin: 0;
+                height: 40px;
+                cursor: pointer;
+                width: 100%;
+                border-radius: 5px;
+                font-size:20px;
+                outline: none !important;
+
+                &::placeholder{
+                    color:black;
+                    font-size:20px;
+                    text-align: center;
+                }
+            }
+
+            .tip-value-custom.active{
+                border:2px solid $primary-color !important;
+                outline: none !important;
             }
         }
     
