@@ -99,15 +99,17 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>  
 <script src="dist/js/index.js"></script>
 
-<!-- Worked on the tip buttons  -->
 <script type="text/javascript">
   $(document).ready(function() {
+
+    //worked on the tip buttons
     $(".tip-value").click(function () {
         if(!$(this).hasClass('active'))
         {
             $(".tip-value.active").removeClass("active");
             $(".tip-value-custom.active").removeClass("active");
             $(this).addClass("active");        
+            resetBtnChange();
         }
     });
 
@@ -116,10 +118,25 @@
         {
             $(".tip-value-custom.active").removeClass("active");
             $(".tip-value.active").removeClass("active");
-            $(this).addClass("active");        
+            $(this).addClass("active");      
+            resetBtnChange();
         }
     });
+
+    // If any number is entered in the input field then change the features of the resetbtn.
+    $("input[type='number']").on("input", function() {
+      resetBtnChange();
+    });
+
+    function resetBtnChange(){
+      $("#resetBtn").removeAttr('disabled');
+      $("#resetBtn").css({"background-color":"#9FE8DF", "color" : "black"});
+
+    }
+
+
 });
+
 </script>
 
 
