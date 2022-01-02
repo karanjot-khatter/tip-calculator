@@ -82,12 +82,26 @@ header{
         padding: 0 10px;
         float:left;
 
+        .labelValidation {
+            margin-top: 40px;
+            letter-spacing: 0.1em;
+            color: #00494d;
+            margin-bottom: 0.5rem;
+            padding-bottom: 5px;
+        }
+
+        p#noOfPeopleValidation, p#billValidation{
+            float: right;
+            color: red;
+        }
+
         label{
             letter-spacing: 0.1em;
-            color: $very-dark-cyan;
+            color: #00494d;
             margin-bottom: 0.5rem;
-            padding-bottom:5px;
+            padding-bottom: 5px;
         }
+
         .input-box{
             .dollarsign, .userEmoji{
                 float: left;
@@ -119,7 +133,7 @@ header{
             }
 
             input[type=number]:focus {
-                border:2px solid $primary-color;
+                border:2px solid red;
                 outline: none !important;
               }
             

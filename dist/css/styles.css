@@ -76,6 +76,19 @@ header h3 {
   float: left;
 }
 
+.bill-area .left-section .labelValidation {
+  margin-top: 40px;
+  letter-spacing: 0.1em;
+  color: #00494d;
+  margin-bottom: 0.5rem;
+  padding-bottom: 5px;
+}
+
+.bill-area .left-section p#noOfPeopleValidation, .bill-area .left-section p#billValidation {
+  float: right;
+  color: red;
+}
+
 .bill-area .left-section label {
   letter-spacing: 0.1em;
   color: #00494d;
@@ -129,7 +142,7 @@ header h3 {
 }
 
 .bill-area .left-section .input-box input[type=number]:focus {
-  border: 2px solid #26c0ab;
+  border: 2px solid red;
   outline: none !important;
 }
 
