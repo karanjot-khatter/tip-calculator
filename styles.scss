@@ -167,6 +167,12 @@ header{
                 border-radius: 5px;
                 font-size:20px;
                 outline: none !important;
+                text-align: center;
+
+                &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
 
                 &::placeholder{
                     color:black;
@@ -178,6 +184,7 @@ header{
             .tip-value-custom.active{
                 border:2px solid $primary-color !important;
                 outline: none !important;
+                text-align: center;
             }
         }
     

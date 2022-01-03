@@ -50,10 +50,10 @@
             <button value="25" class="tip-value">25%</button>
           </div>
           <div class="col-sm">
-            <button vlaue="50" class="tip-value">50%</button>
+            <button value="50" class="tip-value">50%</button>
           </div>
           <div style="padding-right:0 !important" class="col-sm">
-            <input  dir="rtl" placeholder="Custom" type="text" class="tip-value-custom">
+            <input placeholder="Custom" type="number" class="tip-value-custom" min="0" onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189">
 
           </div>
         </div>
@@ -113,20 +113,18 @@
     $(".tip-value").click(function () {
         if(!$(this).hasClass('active'))
         {
-            $(".tip-value.active").removeClass("active");
-            $(".tip-value-custom.active").removeClass("active");
-            $(this).addClass("active");        
-            resetBtnEnabled();
+          removeActiveButtons();
+          $(this).addClass("active");        
+          resetBtnEnabled();
         }
     });
 
     $(".tip-value-custom").click(function () {
         if(!$(this).hasClass('active'))
         {
-            $(".tip-value-custom.active").removeClass("active");
-            $(".tip-value.active").removeClass("active");
-            $(this).addClass("active");      
-            resetBtnEnabled();
+          removeActiveButtons();
+          $(this).addClass("active");      
+          resetBtnEnabled();
         }
     });
 
@@ -141,6 +139,15 @@
       } else{
         $(this).css({"border-color":"hsl(172, 67%, 45%)"});
         $('#billValidation').html('');
+
+        if ($('#noOfPeople').val() > '0'){ 
+          var billAmount = $('#billamount').val();
+          var noOfPeople =  $('#noOfPeople').val();
+
+          var billPerPerson = billAmount / noOfPeople;
+
+          $('#totalAmountPP').html('$' + billPerPerson.toFixed(2));
+        } 
       }
 
     });
@@ -151,15 +158,48 @@
       if ($(this).val() === '0' ) {
         $(this).css({"border-color":"red"});
         $('#noOfPeopleValidation').html("Can't be zero");
+        $('#totalAmountPP').html('0');
 
       }  else{
         $(this).css({"border-color":"hsl(172, 67%, 45%)"});
         $('#noOfPeopleValidation').html('');
+
+        //do a check to see if 'tip button' button clicked and bill amount entered
+
+        if ($('#billamount').val() > '0'){ 
+          var billAmount = $('#billamount').val();
+          var noOfPeople =  $('#noOfPeople').val();
+          var tipAmount = $('.tip-value.active').val();
+          var customTipAmount = $('.tip-value-custom.active').val();
+
+          // the below happens when there is a valid billamount and tipamount. 
+          if (tipAmount || customTipAmount){
+            var chosenTip = tipAmount ? tipAmount :  customTipAmount;
+
+            var tipPerPerson = ((chosenTip / 100) * billAmount ) / noOfPeople;
+
+            var totalTip = tipPerPerson * noOfPeople;
+
+            var billPerPerson = billAmount / noOfPeople;
+
+            var billandTipPerPerson = billPerPerson + tipPerPerson;
+    
+            $('#tipAmountPP').html('$' + tipPerPerson.toFixed(2));
+
+            $('#totalAmountPP').html('$' + billandTipPerPerson.toFixed(2));
+
+
+          }
+
+        } 
       }
 
     });
 
-
+    function removeActiveButtons(){
+      $(".tip-value.active").removeClass("active");
+      $(".tip-value-custom.active").removeClass("active");
+    }
 
     function resetBtnEnabled(){
       $("#resetBtn").removeAttr('disabled');
