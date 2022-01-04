@@ -212,7 +212,7 @@
           var customTipAmount = $('.tip-value-custom.active').val();
 
           // the below happens when there is a valid billamount and tipamount. 
-          if (tipAmount || customTipAmount){
+          if (tipAmount || customTipAmount) {
             var chosenTip = tipAmount ? tipAmount :  customTipAmount;
 
             var tipPerPerson = ((chosenTip / 100) * billAmount ) / noOfPeople;
