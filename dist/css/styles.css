@@ -36,6 +36,14 @@ header h3 {
   .bill-area .right-section {
     width: unset !important;
     float: unset !important;
+    padding: 10px !important;
+    height: 250px !important;
+  }
+  .bill-area .right-section .col-sm-6.pplabel, .bill-area .right-section .col-sm-6.ppamount {
+    width: 50%;
+  }
+  .bill-area .right-section #resetBtn {
+    margin-top: 25px !important;
   }
   .bill-area .left-section {
     width: unset !important;
@@ -43,6 +51,16 @@ header h3 {
   }
   .bill-area .left-section p#noOfPeopleValidation, .bill-area .left-section p#billValidation, .bill-area .left-section label {
     font-size: 14px !important;
+  }
+  .bill-area .left-section .mobile {
+    display: block !important;
+  }
+  .bill-area .left-section .mobile .col-sm-6.tip {
+    width: 50%;
+    padding: 0;
+  }
+  .bill-area .left-section .desktop {
+    display: none !important;
   }
 }
 
@@ -105,6 +123,10 @@ header h3 {
   width: 45%;
   padding: 20px;
   float: left;
+}
+
+.bill-area .left-section .mobile {
+  display: none;
 }
 
 .bill-area .left-section .labelValidation {

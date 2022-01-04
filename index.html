@@ -33,6 +33,8 @@
 
       <label>Select Tip %</label>
       <div class="container">
+        <!-- Desktop -->
+        <div class="desktop">
         <div class="row">
           <div style="padding-left:0 !important" class="col-sm">
             <button value="5" class="tip-value">5%</button>
@@ -59,6 +61,36 @@
         </div>
       </div>
 
+      <!-- Mobile -->
+      <div class="mobile">
+        <div class="row">
+          <div style="padding-right:10px;" class="col-sm-6 tip">
+            <button value="5" class="tip-value">5%</button>
+          </div>
+          <div class="col-sm-6 tip">
+            <button value="10" class="tip-value">10%</button>
+          </div>
+        </div>
+
+        <div style="padding-top:10px" class="row">
+          <div style="padding-right:10px" class="col-sm-6 tip">
+            <button value="15" class="tip-value">15%</button>
+          </div>
+          <div class="col-sm-6 tip">
+            <button value="25" class="tip-value">25%</button>
+          </div>
+        </div>
+        <div style="padding-top:10px" class="row">
+          <div style="padding-right:10px" class="col-sm-6 tip">
+            <button value="50" class="tip-value">50%</button>
+          </div>
+          <div class="col-sm-6 tip">
+            <input placeholder="Custom" type="number" id="tip-value-custom" class="tip-value-custom" min="0" onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189">
+          </div>
+        </div>
+      </div>
+      </div>
+
       <div class="labelValidation">
         <label style="float:left;">Number of People</label>
         <p id="noOfPeopleValidation">Can't be zero</p>
@@ -74,21 +106,21 @@
     <div class="right-section">
       <div class="container">
         <div style="margin-top:20px;" class="row">
-          <div class="col-sm">
+          <div class="col-sm-6 pplabel">
             <p class="tip-label-top">Tip Amount</p>
             <p class="tip-label-bottom">/  person</p>
           </div>
-          <div style="padding-right:0 !important; text-align-last: end;" class="col-sm">
+          <div style="padding-right:0 !important; text-align-last: end;" class="col-sm-6 ppamount">
           <h1 id="tipAmountPP">$0.00</h1>
           </div>
         </div>
 
         <div style="margin-top:30px;" class="row">
-          <div class="col-sm">
+          <div class="col-sm-6 pplabel">
             <p class="tip-label-top">Total</p>
             <p class="tip-label-bottom">/  person</p>
           </div>
-          <div style="padding-right:0 !important; text-align-last: end;" class="col-sm">
+          <div style="padding-right:0 !important; text-align-last: end;" class="col-sm-6 ppamount">
           <h1 id="totalAmountPP">$0.00</h1>
           </div>
         </div>
@@ -212,7 +244,7 @@
           var customTipAmount = $('.tip-value-custom.active').val();
 
           // the below happens when there is a valid billamount and tipamount. 
-          if (tipAmount || customTipAmount) {
+          if (tipAmount || customTipAmount){
             var chosenTip = tipAmount ? tipAmount :  customTipAmount;
 
             var tipPerPerson = ((chosenTip / 100) * billAmount ) / noOfPeople;
