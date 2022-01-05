@@ -52,16 +52,6 @@ header h3 {
   .bill-area .left-section p#noOfPeopleValidation, .bill-area .left-section p#billValidation, .bill-area .left-section label {
     font-size: 14px !important;
   }
-  .bill-area .left-section .mobile {
-    display: block !important;
-  }
-  .bill-area .left-section .mobile .col-sm-6.tip {
-    width: 50%;
-    padding: 0;
-  }
-  .bill-area .left-section .desktop {
-    display: none !important;
-  }
 }
 
 .bill-area {
@@ -213,6 +203,7 @@ header h3 {
   font-size: 20px;
   border-radius: 5px;
   border: 0;
+  margin-bottom: 10px;
 }
 
 .bill-area .left-section .row .tip-value.active {

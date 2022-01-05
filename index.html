@@ -7,14 +7,9 @@
   <title>Tip Calculator</title>
   <link rel="stylesheet" href="dist/css/all.min.css" type="text/css">
   <link rel="stylesheet" href="dist/css/styles.css" type="text/css">
-
-
-  <style>
-    /* Chrome, Safari, Edge, Opera */
-    </style>
-
 </head>
 <body>
+  
   <header>
     <h3>SPLI</h3>
     <h3 style="letter-spacing: 0.2em;">TTER</h3>
@@ -33,62 +28,26 @@
 
       <label>Select Tip %</label>
       <div class="container">
-        <!-- Desktop -->
-        <div class="desktop">
-        <div class="row">
-          <div style="padding-left:0 !important" class="col-sm">
+        <div class="row row-cols-auto">
+          <div class="col-sm-4 col-6">
             <button value="5" class="tip-value">5%</button>
           </div>
-          <div class="col-sm">
+          <div class="col-sm-4 col-6">
             <button value="10" class="tip-value">10%</button>
           </div>
-          <div style="padding-right:0 !important" class="col-sm">
+          <div class="col-sm-4 col-6">
             <button value="15" class="tip-value">15%</button>
           </div>
-        </div>
-
-        <div style="padding-top:20px" class="row">
-          <div style="padding-left:0 !important" class="col-sm">
+          <div class="col-sm-4 col-6">
             <button value="25" class="tip-value">25%</button>
           </div>
-          <div class="col-sm">
+          <div class="col-sm-4 col-6">
             <button value="50" class="tip-value">50%</button>
           </div>
-          <div style="padding-right:0 !important" class="col-sm">
-            <input placeholder="Custom" type="number" id="tip-value-custom" class="tip-value-custom" min="0" onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189">
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile -->
-      <div class="mobile">
-        <div class="row">
-          <div style="padding-right:10px;" class="col-sm-6 tip">
-            <button value="5" class="tip-value">5%</button>
-          </div>
-          <div class="col-sm-6 tip">
-            <button value="10" class="tip-value">10%</button>
-          </div>
-        </div>
-
-        <div style="padding-top:10px" class="row">
-          <div style="padding-right:10px" class="col-sm-6 tip">
-            <button value="15" class="tip-value">15%</button>
-          </div>
-          <div class="col-sm-6 tip">
-            <button value="25" class="tip-value">25%</button>
-          </div>
-        </div>
-        <div style="padding-top:10px" class="row">
-          <div style="padding-right:10px" class="col-sm-6 tip">
-            <button value="50" class="tip-value">50%</button>
-          </div>
-          <div class="col-sm-6 tip">
+          <div class="col-sm-4 col-6">
             <input placeholder="Custom" type="number" id="tip-value-custom" class="tip-value-custom" min="0" onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189">
           </div>
         </div>
-      </div>
       </div>
 
       <div class="labelValidation">
